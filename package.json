@@ -1,0 +1,22 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/firebase": "7.3.3",
+    "@nuxtjs/pwa": "^3.3.4",
+    "core-js": "^3.8.2",
+    "firebase": "^8.2.3",
+    "nuxt": "^2.14.12",
+    "portal-vue": "^2.1.7"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^3.4.2"
+  }
+}
