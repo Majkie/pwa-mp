@@ -75,15 +75,6 @@ export const actions = {
       commit('editFirebaseTodo', {todo, text: value})
     }
   },
-  toggleAll({state, commit}, done) {
-    state.todos.forEach((todo) => {
-      commit('editTodo', {todo, done})
-
-      if (this.getters.isAuthenticated) {
-        commit('editFirebaseTodo', {todo, done})
-      }
-    })
-  },
   clearCompleted({state, commit}) {
     state.todos.filter(todo => todo.done)
       .forEach(todo => {
