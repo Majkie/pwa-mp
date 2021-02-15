@@ -50,7 +50,7 @@
           <todo-item :key="todo.uid" :todo="todo"/>
         </template>
         <div v-show="visibility === 'completed' && filteredTodos.length > 0" class="flex justify-end py-4 px-4">
-          <button class="flex-none bg-white hover:bg-gray-200 focus:outline-none transition-colors duration-200 text-gray-900 font-semibold rounded-lg py-3 px-4">
+          <button @click="clearCompleted" class="flex-none bg-white hover:bg-gray-200 focus:outline-none transition-colors duration-200 text-gray-900 font-semibold rounded-lg py-3 px-4">
             Clear completed
           </button>
         </div>
