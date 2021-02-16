@@ -84,6 +84,12 @@ export default {
     }
   },
   async mounted() {
+
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 1500)
+    })
+
     this.$fire.auth.onAuthStateChanged((user) => {
       if (user) {
         this.setUser(user)

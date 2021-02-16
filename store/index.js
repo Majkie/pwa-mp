@@ -104,7 +104,10 @@ export const actions = {
     return new Promise((resolve, reject) => {
       let provider = new this.$fireModule.default.auth.GoogleAuthProvider();
 
-      this.$fire.auth.signInWithPopup(provider).then(() => resolve())
+      this.$fire.auth.setPersistence(this.$fireModule.default.auth.Auth.Persistence.LOCAL)
+          .then(() => {
+            this.$fire.auth.signInWithPopup(provider).then(() => resolve())
+          })
     })
   },
   logout({commit}) {
