@@ -77,10 +77,6 @@ export default {
     },
   },
 
-
-  // 1.5s Preload component, Firebase is slow as fu**
-  loading: '~/components/LoadingComponent.vue',
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
